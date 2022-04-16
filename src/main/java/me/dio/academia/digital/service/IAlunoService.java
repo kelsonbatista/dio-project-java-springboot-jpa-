@@ -4,6 +4,8 @@ import me.dio.academia.digital.entity.Aluno;
 import me.dio.academia.digital.entity.AvaliacaoFisica;
 import me.dio.academia.digital.entity.form.AlunoForm;
 import me.dio.academia.digital.entity.form.AlunoUpdateForm;
+import me.dio.academia.digital.repository.AlunoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -14,7 +16,8 @@ public interface IAlunoService {
    * @param form formulário referente aos dados para criação de um Aluno no banco de dados.
    * @return Aluno recém-criado.
    */
-  Aluno create(AlunoForm form);
+
+ Aluno create(AlunoForm form);
 
   /**
    * Retorna um Aluno que está no banco de dados de acordo com seu Id.
